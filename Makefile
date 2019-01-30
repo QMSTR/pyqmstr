@@ -18,3 +18,7 @@ requirements.txt:
 
 qmstr/service/%_pb2.py qmstr/service/%_pb2_grpc.py : venv proto/%.proto
 	venv/bin/python -m grpc_tools.protoc -Iproto --python_out=./qmstr/service --grpc_python_out=./qmstr/service proto/*.proto
+
+clean:
+	rm requirements.txt
+	rm -fr venv
