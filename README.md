@@ -1,0 +1,2 @@
+# pyqmstr
+QMSTR Python library
