@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='service',
   syntax='proto3',
   serialized_options=_b('\n\026org.qmstr.grpc.service'),
-  serialized_pb=_b('\n\x13reportservice.proto\x12\x07service\x1a\tbom.proto\"+\n\x15ReporterConfigRequest\x12\x12\n\nreporterID\x18\x01 \x01(\x05\"\xac\x01\n\x16ReporterConfigResponse\x12\x0f\n\x07session\x18\x01 \x01(\t\x12\x41\n\tconfigMap\x18\x02 \x03(\x0b\x32..service.ReporterConfigResponse.ConfigMapEntry\x12\x0c\n\x04name\x18\x04 \x01(\t\x1a\x30\n\x0e\x43onfigMapEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"E\n\x0fInfoDataRequest\x12\x0e\n\x06rootID\x18\x01 \x01(\t\x12\x10\n\x08infotype\x18\x02 \x01(\t\x12\x10\n\x08\x64\x61tatype\x18\x03 \x01(\t\" \n\x10InfoDataResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\t\"?\n\nBOMRequest\x12\x10\n\x08warnings\x18\x01 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x02 \x01(\x08\x12\x0f\n\x07session\x18\x03 \x01(\t2\xdc\x01\n\rReportService\x12V\n\x11GetReporterConfig\x12\x1e.service.ReporterConfigRequest\x1a\x1f.service.ReporterConfigResponse\"\x00\x12\x44\n\x0bGetInfoData\x12\x18.service.InfoDataRequest\x1a\x19.service.InfoDataResponse\"\x00\x12-\n\x06GetBOM\x12\x13.service.BOMRequest\x1a\x0c.service.BOM\"\x00\x42\x18\n\x16org.qmstr.grpc.serviceX\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x13reportservice.proto\x12\x07service\x1a\tbom.proto\"+\n\x15ReporterConfigRequest\x12\x12\n\nreporterID\x18\x01 \x01(\x05\"\x9b\x01\n\x16ReporterConfigResponse\x12\x41\n\tconfigMap\x18\x01 \x03(\x0b\x32..service.ReporterConfigResponse.ConfigMapEntry\x12\x0c\n\x04name\x18\x02 \x01(\t\x1a\x30\n\x0e\x43onfigMapEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"E\n\x0fInfoDataRequest\x12\x0e\n\x06rootID\x18\x01 \x01(\t\x12\x10\n\x08infotype\x18\x02 \x01(\t\x12\x10\n\x08\x64\x61tatype\x18\x03 \x01(\t\" \n\x10InfoDataResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\t\".\n\nBOMRequest\x12\x10\n\x08warnings\x18\x01 \x01(\x08\x12\x0e\n\x06\x65rrors\x18\x02 \x01(\x08\x32\xdc\x01\n\rReportService\x12V\n\x11GetReporterConfig\x12\x1e.service.ReporterConfigRequest\x1a\x1f.service.ReporterConfigResponse\"\x00\x12\x44\n\x0bGetInfoData\x12\x18.service.InfoDataRequest\x1a\x19.service.InfoDataResponse\"\x00\x12-\n\x06GetBOM\x12\x13.service.BOMRequest\x1a\x0c.service.BOM\"\x00\x42\x18\n\x16org.qmstr.grpc.serviceX\x00\x62\x06proto3')
   ,
   dependencies=[bom__pb2.DESCRIPTOR,])
 
@@ -91,8 +91,8 @@ _REPORTERCONFIGRESPONSE_CONFIGMAPENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=213,
-  serialized_end=261,
+  serialized_start=196,
+  serialized_end=244,
 )
 
 _REPORTERCONFIGRESPONSE = _descriptor.Descriptor(
@@ -103,22 +103,15 @@ _REPORTERCONFIGRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='session', full_name='service.ReporterConfigResponse.session', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='configMap', full_name='service.ReporterConfigResponse.configMap', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='configMap', full_name='service.ReporterConfigResponse.configMap', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='service.ReporterConfigResponse.name', index=2,
-      number=4, type=9, cpp_type=9, label=1,
+      name='name', full_name='service.ReporterConfigResponse.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -136,7 +129,7 @@ _REPORTERCONFIGRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=89,
-  serialized_end=261,
+  serialized_end=244,
 )
 
 
@@ -180,8 +173,8 @@ _INFODATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=263,
-  serialized_end=332,
+  serialized_start=246,
+  serialized_end=315,
 )
 
 
@@ -211,8 +204,8 @@ _INFODATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=334,
-  serialized_end=366,
+  serialized_start=317,
+  serialized_end=349,
 )
 
 
@@ -237,13 +230,6 @@ _BOMREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='session', full_name='service.BOMRequest.session', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -256,8 +242,8 @@ _BOMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=368,
-  serialized_end=431,
+  serialized_start=351,
+  serialized_end=397,
 )
 
 _REPORTERCONFIGRESPONSE_CONFIGMAPENTRY.containing_type = _REPORTERCONFIGRESPONSE
@@ -322,8 +308,8 @@ _REPORTSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=434,
-  serialized_end=654,
+  serialized_start=400,
+  serialized_end=620,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetReporterConfig',
