@@ -18,6 +18,7 @@ requirements.txt:
 
 qmstr/service/%_pb2.py qmstr/service/%_pb2_grpc.py: proto/%.proto
 	venv/bin/python -m grpc_tools.protoc -Iproto --python_out=./qmstr/service --grpc_python_out=./qmstr/service proto/*.proto
+	sed -i -E 's/^(import.*_pb2)/from . \1/' qmstr/service/*.py
 
 clean:
 	rm requirements.txt
