@@ -8,5 +8,5 @@ setup(
     license='GPLv3',
 
     packages=find_packages(exclude=['tests']),
-    install_requires=['grpcio'],
+    install_requires=['grpcio', 'protobuf'],
 )
