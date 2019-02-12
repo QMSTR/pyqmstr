@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='service',
   syntax='proto3',
   serialized_options=_b('\n\026org.qmstr.grpc.service'),
-  serialized_pb=_b('\n\x0f\x64\x61tamodel.proto\x12\x07service\"\xa1\x02\n\x08\x46ileNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x14\n\x0c\x66ileNodeType\x18\x02 \x01(\t\x12(\n\x08\x66ileType\x18\x03 \x01(\x0e\x32\x16.service.FileNode.Type\x12\x0c\n\x04path\x18\x04 \x01(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04hash\x18\x06 \x01(\t\x12\x0e\n\x06\x62roken\x18\x07 \x01(\x08\x12&\n\x0b\x64\x65rivedFrom\x18\x08 \x03(\x0b\x32\x11.service.FileNode\x12)\n\x0e\x61\x64\x64itionalInfo\x18\t \x03(\x0b\x32\x11.service.InfoNode\";\n\x04Type\x12\t\n\x05UNDEF\x10\x00\x12\n\n\x06SOURCE\x10\x01\x12\x10\n\x0cINTERMEDIATE\x10\x02\x12\n\n\x06TARGET\x10\x03\"\xe6\x01\n\x08InfoNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x14\n\x0cinfoNodeType\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x17\n\x0f\x63onfidenceScore\x18\x04 \x01(\x01\x12#\n\x08\x61nalyzer\x18\x05 \x03(\x0b\x32\x11.service.Analyzer\x12-\n\tdataNodes\x18\x06 \x03(\x0b\x32\x1a.service.InfoNode.DataNode\x1a<\n\x08\x44\x61taNode\x12\x14\n\x0c\x64\x61taNodeType\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"\x7f\n\x08\x41nalyzer\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10\x61nalyzerNodeType\x18\x03 \x01(\t\x12\x12\n\ntrustLevel\x18\x04 \x01(\x03\x12*\n\x07pathSub\x18\x05 \x03(\x0b\x32\x19.service.PathSubstitution\",\n\x10PathSubstitution\x12\x0b\n\x03old\x18\x01 \x01(\t\x12\x0b\n\x03new\x18\x02 \x01(\t\"\xa5\x01\n\x0bPackageNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x17\n\x0fpackageNodeType\x18\x04 \x01(\t\x12\"\n\x07targets\x18\x05 \x03(\x0b\x32\x11.service.FileNode\x12)\n\x0e\x61\x64\x64itionalInfo\x18\x06 \x03(\x0b\x32\x11.service.InfoNode\x12\x13\n\x0b\x62uildConfig\x18\x07 \x01(\t\"<\n\x05\x45vent\x12\"\n\x05\x63lass\x18\x01 \x01(\x0e\x32\x13.service.EventClass\x12\x0f\n\x07message\x18\x02 \x01(\t\"X\n\x0eQmstrStateNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x1a\n\x12qmstrStateNodeType\x18\x02 \x01(\t\x12\x1d\n\x05phase\x18\x03 \x01(\x0e\x32\x0e.service.Phase*,\n\nEventClass\x12\x07\n\x03\x41LL\x10\x00\x12\t\n\x05PHASE\x10\x01\x12\n\n\x06MODULE\x10\x02*@\n\x05Phase\x12\x08\n\x04INIT\x10\x00\x12\t\n\x05\x42UILD\x10\x01\x12\x0c\n\x08\x41NALYSIS\x10\x02\x12\n\n\x06REPORT\x10\x03\x12\x08\n\x04\x46\x41IL\x10\x04*\'\n\rExceptionType\x12\t\n\x05\x45RROR\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x42\x18\n\x16org.qmstr.grpc.serviceb\x06proto3')
+  serialized_pb=_b('\n\x0f\x64\x61tamodel.proto\x12\x07service\"\xd2\x02\n\x08\x46ileNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x14\n\x0c\x66ileNodeType\x18\x02 \x01(\t\x12(\n\x08\x66ileType\x18\x03 \x01(\x0e\x32\x16.service.FileNode.Type\x12\x0c\n\x04path\x18\x04 \x01(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04hash\x18\x06 \x01(\t\x12\x0e\n\x06\x62roken\x18\x07 \x01(\x08\x12&\n\x0b\x64\x65rivedFrom\x18\x08 \x03(\x0b\x32\x11.service.FileNode\x12)\n\x0e\x61\x64\x64itionalInfo\x18\t \x03(\x0b\x32\x11.service.InfoNode\x12/\n\x0e\x64iagnosticInfo\x18\n \x03(\x0b\x32\x17.service.DiagnosticNode\";\n\x04Type\x12\t\n\x05UNDEF\x10\x00\x12\n\n\x06SOURCE\x10\x01\x12\x10\n\x0cINTERMEDIATE\x10\x02\x12\n\n\x06TARGET\x10\x03\"\xe6\x01\n\x08InfoNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x14\n\x0cinfoNodeType\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x17\n\x0f\x63onfidenceScore\x18\x04 \x01(\x01\x12#\n\x08\x61nalyzer\x18\x05 \x03(\x0b\x32\x11.service.Analyzer\x12-\n\tdataNodes\x18\x06 \x03(\x0b\x32\x1a.service.InfoNode.DataNode\x1a<\n\x08\x44\x61taNode\x12\x14\n\x0c\x64\x61taNodeType\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"\xdc\x01\n\x0e\x44iagnosticNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x1a\n\x12\x64iagnosticNodeType\x18\x02 \x01(\t\x12\x32\n\x08severity\x18\x03 \x01(\x0e\x32 .service.DiagnosticNode.Severity\x12\x0f\n\x07message\x18\x04 \x01(\t\x12#\n\x08\x61nalyzer\x18\x05 \x03(\x0b\x32\x11.service.Analyzer\"7\n\x08Severity\x12\t\n\x05UNDEF\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"\x7f\n\x08\x41nalyzer\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x10\x61nalyzerNodeType\x18\x03 \x01(\t\x12\x12\n\ntrustLevel\x18\x04 \x01(\x03\x12*\n\x07pathSub\x18\x05 \x03(\x0b\x32\x19.service.PathSubstitution\",\n\x10PathSubstitution\x12\x0b\n\x03old\x18\x01 \x01(\t\x12\x0b\n\x03new\x18\x02 \x01(\t\"\xd6\x01\n\x0bPackageNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x17\n\x0fpackageNodeType\x18\x04 \x01(\t\x12\"\n\x07targets\x18\x05 \x03(\x0b\x32\x11.service.FileNode\x12)\n\x0e\x61\x64\x64itionalInfo\x18\x06 \x03(\x0b\x32\x11.service.InfoNode\x12\x13\n\x0b\x62uildConfig\x18\x07 \x01(\t\x12/\n\x0e\x64iagnosticInfo\x18\x08 \x03(\x0b\x32\x17.service.DiagnosticNode\"<\n\x05\x45vent\x12\"\n\x05\x63lass\x18\x01 \x01(\x0e\x32\x13.service.EventClass\x12\x0f\n\x07message\x18\x02 \x01(\t\"X\n\x0eQmstrStateNode\x12\x0b\n\x03uid\x18\x01 \x01(\t\x12\x1a\n\x12qmstrStateNodeType\x18\x02 \x01(\t\x12\x1d\n\x05phase\x18\x03 \x01(\x0e\x32\x0e.service.Phase*,\n\nEventClass\x12\x07\n\x03\x41LL\x10\x00\x12\t\n\x05PHASE\x10\x01\x12\n\n\x06MODULE\x10\x02*@\n\x05Phase\x12\x08\n\x04INIT\x10\x00\x12\t\n\x05\x42UILD\x10\x01\x12\x0c\n\x08\x41NALYSIS\x10\x02\x12\n\n\x06REPORT\x10\x03\x12\x08\n\x04\x46\x41IL\x10\x04*\'\n\rExceptionType\x12\t\n\x05\x45RROR\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x42\x18\n\x16org.qmstr.grpc.serviceb\x06proto3')
 )
 
 _EVENTCLASS = _descriptor.EnumDescriptor(
@@ -44,8 +44,8 @@ _EVENTCLASS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1048,
-  serialized_end=1092,
+  serialized_start=1369,
+  serialized_end=1413,
 )
 _sym_db.RegisterEnumDescriptor(_EVENTCLASS)
 
@@ -79,8 +79,8 @@ _PHASE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1094,
-  serialized_end=1158,
+  serialized_start=1415,
+  serialized_end=1479,
 )
 _sym_db.RegisterEnumDescriptor(_PHASE)
 
@@ -102,8 +102,8 @@ _EXCEPTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1160,
-  serialized_end=1199,
+  serialized_start=1481,
+  serialized_end=1520,
 )
 _sym_db.RegisterEnumDescriptor(_EXCEPTIONTYPE)
 
@@ -145,10 +145,40 @@ _FILENODE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=259,
-  serialized_end=318,
+  serialized_start=308,
+  serialized_end=367,
 )
 _sym_db.RegisterEnumDescriptor(_FILENODE_TYPE)
+
+_DIAGNOSTICNODE_SEVERITY = _descriptor.EnumDescriptor(
+  name='Severity',
+  full_name='service.DiagnosticNode.Severity',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNDEF', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INFO', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WARNING', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR', index=3, number=3,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=768,
+  serialized_end=823,
+)
+_sym_db.RegisterEnumDescriptor(_DIAGNOSTICNODE_SEVERITY)
 
 
 _FILENODE = _descriptor.Descriptor(
@@ -221,6 +251,13 @@ _FILENODE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='diagnosticInfo', full_name='service.FileNode.diagnosticInfo', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -235,7 +272,7 @@ _FILENODE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=29,
-  serialized_end=318,
+  serialized_end=367,
 )
 
 
@@ -279,8 +316,8 @@ _INFONODE_DATANODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=491,
-  serialized_end=551,
+  serialized_start=540,
+  serialized_end=600,
 )
 
 _INFONODE = _descriptor.Descriptor(
@@ -344,8 +381,68 @@ _INFONODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=321,
-  serialized_end=551,
+  serialized_start=370,
+  serialized_end=600,
+)
+
+
+_DIAGNOSTICNODE = _descriptor.Descriptor(
+  name='DiagnosticNode',
+  full_name='service.DiagnosticNode',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='service.DiagnosticNode.uid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='diagnosticNodeType', full_name='service.DiagnosticNode.diagnosticNodeType', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='severity', full_name='service.DiagnosticNode.severity', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='service.DiagnosticNode.message', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='analyzer', full_name='service.DiagnosticNode.analyzer', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _DIAGNOSTICNODE_SEVERITY,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=603,
+  serialized_end=823,
 )
 
 
@@ -403,8 +500,8 @@ _ANALYZER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=553,
-  serialized_end=680,
+  serialized_start=825,
+  serialized_end=952,
 )
 
 
@@ -441,8 +538,8 @@ _PATHSUBSTITUTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=682,
-  serialized_end=726,
+  serialized_start=954,
+  serialized_end=998,
 )
 
 
@@ -495,6 +592,13 @@ _PACKAGENODE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='diagnosticInfo', full_name='service.PackageNode.diagnosticInfo', index=6,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -507,8 +611,8 @@ _PACKAGENODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=729,
-  serialized_end=894,
+  serialized_start=1001,
+  serialized_end=1215,
 )
 
 
@@ -545,8 +649,8 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=896,
-  serialized_end=956,
+  serialized_start=1217,
+  serialized_end=1277,
 )
 
 
@@ -590,24 +694,30 @@ _QMSTRSTATENODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=958,
-  serialized_end=1046,
+  serialized_start=1279,
+  serialized_end=1367,
 )
 
 _FILENODE.fields_by_name['fileType'].enum_type = _FILENODE_TYPE
 _FILENODE.fields_by_name['derivedFrom'].message_type = _FILENODE
 _FILENODE.fields_by_name['additionalInfo'].message_type = _INFONODE
+_FILENODE.fields_by_name['diagnosticInfo'].message_type = _DIAGNOSTICNODE
 _FILENODE_TYPE.containing_type = _FILENODE
 _INFONODE_DATANODE.containing_type = _INFONODE
 _INFONODE.fields_by_name['analyzer'].message_type = _ANALYZER
 _INFONODE.fields_by_name['dataNodes'].message_type = _INFONODE_DATANODE
+_DIAGNOSTICNODE.fields_by_name['severity'].enum_type = _DIAGNOSTICNODE_SEVERITY
+_DIAGNOSTICNODE.fields_by_name['analyzer'].message_type = _ANALYZER
+_DIAGNOSTICNODE_SEVERITY.containing_type = _DIAGNOSTICNODE
 _ANALYZER.fields_by_name['pathSub'].message_type = _PATHSUBSTITUTION
 _PACKAGENODE.fields_by_name['targets'].message_type = _FILENODE
 _PACKAGENODE.fields_by_name['additionalInfo'].message_type = _INFONODE
+_PACKAGENODE.fields_by_name['diagnosticInfo'].message_type = _DIAGNOSTICNODE
 _EVENT.fields_by_name['class'].enum_type = _EVENTCLASS
 _QMSTRSTATENODE.fields_by_name['phase'].enum_type = _PHASE
 DESCRIPTOR.message_types_by_name['FileNode'] = _FILENODE
 DESCRIPTOR.message_types_by_name['InfoNode'] = _INFONODE
+DESCRIPTOR.message_types_by_name['DiagnosticNode'] = _DIAGNOSTICNODE
 DESCRIPTOR.message_types_by_name['Analyzer'] = _ANALYZER
 DESCRIPTOR.message_types_by_name['PathSubstitution'] = _PATHSUBSTITUTION
 DESCRIPTOR.message_types_by_name['PackageNode'] = _PACKAGENODE
@@ -639,6 +749,13 @@ InfoNode = _reflection.GeneratedProtocolMessageType('InfoNode', (_message.Messag
   ))
 _sym_db.RegisterMessage(InfoNode)
 _sym_db.RegisterMessage(InfoNode.DataNode)
+
+DiagnosticNode = _reflection.GeneratedProtocolMessageType('DiagnosticNode', (_message.Message,), dict(
+  DESCRIPTOR = _DIAGNOSTICNODE,
+  __module__ = 'datamodel_pb2'
+  # @@protoc_insertion_point(class_scope:service.DiagnosticNode)
+  ))
+_sym_db.RegisterMessage(DiagnosticNode)
 
 Analyzer = _reflection.GeneratedProtocolMessageType('Analyzer', (_message.Message,), dict(
   DESCRIPTOR = _ANALYZER,

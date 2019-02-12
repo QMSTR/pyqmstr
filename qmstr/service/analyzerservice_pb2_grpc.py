@@ -34,6 +34,11 @@ class AnalysisServiceStub(object):
         request_serializer=analyzerservice__pb2.PackageNodeMessage.SerializeToString,
         response_deserializer=analyzerservice__pb2.SendResponse.FromString,
         )
+    self.SendDiagnosticNode = channel.stream_unary(
+        '/service.AnalysisService/SendDiagnosticNode',
+        request_serializer=analyzerservice__pb2.DiagnosticNodeMessage.SerializeToString,
+        response_deserializer=analyzerservice__pb2.SendResponse.FromString,
+        )
 
 
 class AnalysisServiceServicer(object):
@@ -68,6 +73,13 @@ class AnalysisServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def SendDiagnosticNode(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_AnalysisServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -89,6 +101,11 @@ def add_AnalysisServiceServicer_to_server(servicer, server):
       'SendPackageNode': grpc.stream_unary_rpc_method_handler(
           servicer.SendPackageNode,
           request_deserializer=analyzerservice__pb2.PackageNodeMessage.FromString,
+          response_serializer=analyzerservice__pb2.SendResponse.SerializeToString,
+      ),
+      'SendDiagnosticNode': grpc.stream_unary_rpc_method_handler(
+          servicer.SendDiagnosticNode,
+          request_deserializer=analyzerservice__pb2.DiagnosticNodeMessage.FromString,
           response_serializer=analyzerservice__pb2.SendResponse.SerializeToString,
       ),
   }

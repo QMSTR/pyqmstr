@@ -40,6 +40,11 @@ class ControlServiceStub(object):
         request_serializer=datamodel__pb2.FileNode.SerializeToString,
         response_deserializer=datamodel__pb2.FileNode.FromString,
         )
+    self.GetDiagnosticNode = channel.unary_stream(
+        '/service.ControlService/GetDiagnosticNode',
+        request_serializer=datamodel__pb2.DiagnosticNode.SerializeToString,
+        response_deserializer=datamodel__pb2.DiagnosticNode.FromString,
+        )
     self.Status = channel.unary_unary(
         '/service.ControlService/Status',
         request_serializer=controlservice__pb2.StatusMessage.SerializeToString,
@@ -96,6 +101,13 @@ class ControlServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetDiagnosticNode(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def Status(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -144,6 +156,11 @@ def add_ControlServiceServicer_to_server(servicer, server):
           servicer.GetFileNode,
           request_deserializer=datamodel__pb2.FileNode.FromString,
           response_serializer=datamodel__pb2.FileNode.SerializeToString,
+      ),
+      'GetDiagnosticNode': grpc.unary_stream_rpc_method_handler(
+          servicer.GetDiagnosticNode,
+          request_deserializer=datamodel__pb2.DiagnosticNode.FromString,
+          response_serializer=datamodel__pb2.DiagnosticNode.SerializeToString,
       ),
       'Status': grpc.unary_unary_rpc_method_handler(
           servicer.Status,
