@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='service',
   syntax='proto3',
   serialized_options=_b('\n\026org.qmstr.grpc.service'),
-  serialized_pb=_b('\n\x12\x62uildservice.proto\x12\x07service\x1a\x0f\x64\x61tamodel.proto\" \n\rBuildResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\";\n\x0fPushFileMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\" \n\x10PushFileResponse\x12\x0c\n\x04path\x18\x01 \x01(\t2\xc8\x01\n\x0c\x42uildService\x12\x36\n\x05\x42uild\x12\x11.service.FileNode\x1a\x16.service.BuildResponse\"\x00(\x01\x12=\n\x0eSendBuildError\x12\x11.service.InfoNode\x1a\x16.service.BuildResponse\"\x00\x12\x41\n\x08PushFile\x12\x18.service.PushFileMessage\x1a\x19.service.PushFileResponse\"\x00\x42\x18\n\x16org.qmstr.grpc.serviceX\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x12\x62uildservice.proto\x12\x07service\x1a\x0f\x64\x61tamodel.proto\" \n\rBuildResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\";\n\x0fPushFileMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\" \n\x10PushFileResponse\x12\x0c\n\x04path\x18\x01 \x01(\t2\x82\x02\n\x0c\x42uildService\x12\x36\n\x05\x42uild\x12\x11.service.FileNode\x1a\x16.service.BuildResponse\"\x00(\x01\x12=\n\x0eSendBuildError\x12\x11.service.InfoNode\x1a\x16.service.BuildResponse\"\x00\x12\x41\n\x08PushFile\x12\x18.service.PushFileMessage\x1a\x19.service.PushFileResponse\"\x00\x12\x38\n\x07Package\x12\x11.service.FileNode\x1a\x16.service.BuildResponse\"\x00(\x01\x42\x18\n\x16org.qmstr.grpc.serviceX\x00\x62\x06proto3')
   ,
   dependencies=[datamodel__pb2.DESCRIPTOR,])
 
@@ -169,7 +169,7 @@ _BUILDSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=178,
-  serialized_end=378,
+  serialized_end=436,
   methods=[
   _descriptor.MethodDescriptor(
     name='Build',
@@ -196,6 +196,15 @@ _BUILDSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_PUSHFILEMESSAGE,
     output_type=_PUSHFILERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Package',
+    full_name='service.BuildService.Package',
+    index=3,
+    containing_service=None,
+    input_type=datamodel__pb2._FILENODE,
+    output_type=_BUILDRESPONSE,
     serialized_options=None,
   ),
 ])

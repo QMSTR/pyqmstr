@@ -30,6 +30,11 @@ class BuildServiceStub(object):
         request_serializer=buildservice__pb2.PushFileMessage.SerializeToString,
         response_deserializer=buildservice__pb2.PushFileResponse.FromString,
         )
+    self.Package = channel.stream_unary(
+        '/service.BuildService/Package',
+        request_serializer=datamodel__pb2.FileNode.SerializeToString,
+        response_deserializer=buildservice__pb2.BuildResponse.FromString,
+        )
 
 
 class BuildServiceServicer(object):
@@ -57,6 +62,13 @@ class BuildServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def Package(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_BuildServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -74,6 +86,11 @@ def add_BuildServiceServicer_to_server(servicer, server):
           servicer.PushFile,
           request_deserializer=buildservice__pb2.PushFileMessage.FromString,
           response_serializer=buildservice__pb2.PushFileResponse.SerializeToString,
+      ),
+      'Package': grpc.stream_unary_rpc_method_handler(
+          servicer.Package,
+          request_deserializer=datamodel__pb2.FileNode.FromString,
+          response_serializer=buildservice__pb2.BuildResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
